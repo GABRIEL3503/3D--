@@ -9,12 +9,46 @@
         body { 
             margin: 0; 
             overflow: hidden; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background-color: #000;
+        }
+        .menu {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+        }
+        .menu button {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
+    <div class="menu">
+        <button onclick="changeImage('/3d-web-master/fungi2.webp')">Imagen 1</button>
+        <button onclick="changeImage('/3d-web-master/octopus.webp')">Imagen 2</button>
+        <button onclick="changeImage('/3d-web-master/pupe1.webp')">Imagen 3</button>
+        <button onclick="changeImage('/3d-web-master/pupe2.webp')">Imagen 4</button>
+        <button onclick="changeImage('/3d-web-master/pupe3.webp')">Imagen 5</button>
+        <button onclick="changeImage('/3d-web-master/pupe4.webp')">Imagen 6</button>
+        <button onclick="changeImage('/3d-web-master/pupe5.webp')">Imagen 7</button>
+        <button onclick="changeImage('/3d-web-master/pupe6.webp')">Imagen 8</button>
+        <button onclick="changeImage('/3d-web-master/OCT.webp')">Imagen 9</button>
+    </div>
     <a-scene>
-        <a-sky src="DALL·E 2024-07-18 17.49.28 - A realistic outer space scene designed to immerse you in the cosmos. The scene features a vast expanse of dark space filled with vibrant, colorful neb.webp" rotation="0 -130 0"></a-sky>
+        <a-sky id="sky" src="fungi.jpg" rotation="0 -130 0"></a-sky>
     </a-scene>
+    <script>
+        function changeImage(image) {
+            document.getElementById('sky').setAttribute('src', image);
+        }
+    </script>
 </body>
 </html>
