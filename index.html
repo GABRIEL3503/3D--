@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visor de Imagen 360°</title>
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <style>
         body { 
             margin: 0; 
@@ -16,13 +15,10 @@
             background-color: #000;
         }
         .menu {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            z-index: 100;
+            display: flex;
+            flex-direction: column;
         }
         .menu button {
-            display: block;
             margin-bottom: 10px;
             padding: 10px;
             font-size: 16px;
@@ -32,23 +28,18 @@
 </head>
 <body>
     <div class="menu">
-        <button onclick="changeImage('3d-web-master/fungi2.webp')">Imagen 1</button>
-        <button onclick="changeImage('3d-web-master/octopus.webp')">Imagen 2</button>
-        <button onclick="changeImage('3d-web-master/pupe1.webp')">Imagen 3</button>
-        <button onclick="changeImage('3d-web-master/pupe2.webp')">Imagen 4</button>
-        <button onclick="changeImage('3d-web-master/pupe3.webp')">Imagen 5</button>
-        <button onclick="changeImage('3d-web-master/pupe4.webp')">Imagen 6</button>
-        <button onclick="changeImage('3d-web-master/pupe5.webp')">Imagen 7</button>
-        <button onclick="changeImage('3d-web-master/pupe6.webp')">Imagen 8</button>
-        <button onclick="changeImage('3d-web-master/OCT.webp')">Imagen 9</button>
+        <button onclick="location.href='image1.html'">Imagen 1</button>
+        <button onclick="location.href='image2.html'">Imagen 2</button>
+        <button onclick="location.href='image3.html'">Imagen 3</button>
+        <button onclick="location.href='image4.html'">Imagen 4</button>
+        <button onclick="location.href='image5.html'">Imagen 5</button>
+        <button onclick="location.href='image6.html'">Imagen 6</button>
+        <button onclick="location.href='image7.html'">Imagen 7</button>
+        <button onclick="location.href='image8.html'">Imagen 8</button>
+        <button onclick="location.href='image9.html'">Imagen 9</button>
+        <button onclick="location.href='image10.html'">Imagen 10</button>
+
+
     </div>
-    <a-scene>
-        <a-sky id="sky" src="fungi.jpg" rotation="0 -130 0"></a-sky>
-    </a-scene>
-    <script>
-        function changeImage(image) {
-            document.getElementById('sky').setAttribute('src', image);
-        }
-    </script>
 </body>
 </html>
