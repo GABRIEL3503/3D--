@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visor de Imagen 360°</title>
     <style>
-        body { 
-            margin: 0; 
-            overflow: hidden; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            background-image: url("backgr.webp");        }
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("backgr.webp");
+        }
+
         .menu {
             display: flex;
             flex-direction: column;
         }
+
         .menu button {
-            margin-bottom: 10px;
-            padding: 10px;
-            font-size: 16px;
+            color: #410041;
+            background-color: #ffffffb8;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 23px;
+            margin-bottom: 16px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <div class="menu">
         <button onclick="location.href='image1.html'">Fungi</button>
@@ -41,4 +52,5 @@
 
     </div>
 </body>
+
 </html>
